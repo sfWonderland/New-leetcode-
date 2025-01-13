@@ -142,6 +142,7 @@
     <ClCompile Include="2025_01_10.c" />
     <ClCompile Include="2025_01_12.c" />
     <ClCompile Include="2025_01_13.c" />
+    <ClCompile Include="2025_01_14.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
