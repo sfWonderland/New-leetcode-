@@ -52,7 +52,7 @@
 //    return ret;
 //}
 //
-////1389.
+////1389.按既定顺序创建目标数组
 //
 ///**
 // * Note: The returned array must be malloced, assume caller calls free().
