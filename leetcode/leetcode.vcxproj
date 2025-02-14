@@ -127,10 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="2024_01_04.c" />
-    <ClCompile Include="2024_01_05.c" />
-    <ClCompile Include="2024_01_19.c" />
-    <ClCompile Include="2024_01_22.c" />
+    <ClCompile Include="2025_01_04.c" />
+    <ClCompile Include="2025_01_05.c" />
+    <ClCompile Include="2025_01_19.c" />
+    <ClCompile Include="2025_01_22.c" />
     <ClCompile Include="2024_12_27.c" />
     <ClCompile Include="2024_12_28.c" />
     <ClCompile Include="2024_12_29.c" />
@@ -174,6 +174,7 @@
     <ClCompile Include="2025_02_12.c" />
     <ClCompile Include="2025_02_13.c" />
     <ClCompile Include="2025_02_14.c" />
+    <ClCompile Include="2025_02_15.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
