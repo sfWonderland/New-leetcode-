@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ////1758. 生成交替二进制字符串的最少操作数
 //
 //int minOperations(char* s)
@@ -65,7 +64,7 @@
 //    return edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1] ? edges[0][0] : edges[0][1];
 //}
 //
-=======
+
 ////1758. 生成交替二进制字符串的最少操作数
 //
 //int minOperations(char* s)
