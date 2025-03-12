@@ -1,42 +1,120 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////1880. 检查某单词是否等于两单词之和
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+//int alpha_to_num(char* s)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    int num = 0;
+//    for (int i = 0; s[i]; i++)
+//    {
+//        num *= 10;
+//        num += s[i] - 'a';
+//    }
+//    return num;
 //}
+//bool isSumEqual(char* firstWord, char* secondWord, char* targetWord)
+//{
+//    return alpha_to_num(firstWord) + alpha_to_num(secondWord) == alpha_to_num(targetWord);
+//}
+//
+////1598. 文件夹操作日志搜集器
+//
+//int minOperations(char** logs, int logsSize)
+//{
+//    int num = 0;
+//    for (int i = 0; i < logsSize; i++)
+//    {
+//        if (0 == strcmp(logs[i], "../"))
+//            num = fmax(num - 1, 0);
+//        else if (0 == strcmp(logs[i], "./"))
+//            continue;
+//        else
+//            num++;
+//    }
+//    return num;
+//}
+//
+////844. 比较含退格的字符串
+//
+//char* backspace(char* s)
+//{
+//    int slow = 0;
+//    for (int fast = 0; s[fast]; fast++)
+//    {
+//        if (s[fast] != '#')
+//            s[slow++] = s[fast];
+//        else
+//            slow = fmax(slow - 1, 0);
+//    }
+//    s[slow] = '\0';
+//    return s;
+//}
+//bool backspaceCompare(char* s, char* t)
+//{
+//    return strcmp(backspace(s), backspace(t)) == 0;
+//}
+//
+////2390. 从字符串中移除星号
+//
+//char* removeStars(char* s)
+//{
+//    int slow = 0;
+//    for (int fast = 0; s[fast]; fast++)
+//    {
+//        if (s[fast] != '*')
+//            s[slow++] = s[fast];
+//        else
+//            slow--;
+//    }
+//    s[slow] = '\0';
+//    return s;
+//}
+//
+////1047. 删除字符串中的所有相邻重复项
+//
+//char* removeDuplicates(char* s)
+//{
+//    int slow = 0;
+//    for (int fast = 0; s[fast]; fast++)
+//    {
+//        if ((slow == 0) || (slow > 0 && s[fast] != s[slow - 1]))
+//            s[slow++] = s[fast];
+//        else
+//            slow--;
+//    }
+//    s[slow] = '\0';
+//    return s;
+//}
+//
+////2716. 最小化字符串长度
+//
+//int minimizedStringLength(char* s)
+//{
+//    int mask = 0;
+//    for (int i = 0; s[i]; i++)
+//    {
+//        mask |= 1 << (s[i] - 'a');
+//    }
+//    int n = 0;
+//    while (mask)
+//    {
+//        mask &= mask - 1;
+//        n++;
+//    }
+//    return n;
+//}
+//
+////20. 有效的括号
+//
+//bool isValid(char* s)
+//{
+//    int slow = 0;
+//    for (int fast = 0; s[fast]; fast++)
+//    {
+//        if ((slow == 0) || (slow > 0 && (s[fast] <= s[slow - 1] || s[fast] > s[slow - 1] + 2)))
+//            s[slow++] = s[fast];
+//        else
+//            slow--;
+//    }
+//    s[slow] = '\0';
+//    return slow == 0;
+//}
+//
