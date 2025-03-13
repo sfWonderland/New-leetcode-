@@ -1,42 +1,81 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////3340. 检查平衡字符串
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+//bool isBalanced(char* num)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    int sum = 0;
+//    int sign = 1;
+//    for (int i = 0; num[i] != '\0'; i++)
+//    {
+//        int d = num[i] - '0';
+//        sum += d * sign;
+//        sign = -sign;
+//    }
+//    return sum == 0;
 //}
+//
+////1652. 拆炸弹
+//
+///**
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* decrypt(int* code, int codeSize, int k, int* returnSize)
+//{
+//    returnSize[0] = codeSize;
+//    int* newCode = (int*)malloc(sizeof(int) * codeSize * 2);
+//    memcpy(newCode, code, sizeof(int) * codeSize);
+//    memcpy(newCode + codeSize, code, sizeof(int) * codeSize);
+//    int* ret = (int*)malloc(sizeof(int) * codeSize);
+//    memset(ret, 0, sizeof(int) * codeSize);
+//    if (k == 0)
+//        return ret;
+//    int l = k > 0 ? 1 : codeSize + k;
+//    int r = k > 0 ? k : codeSize - 1;
+//    int sum = 0;
+//    for (int i = l; i <= r; i++)
+//    {
+//        sum += newCode[i];
+//    }
+//    for (int i = 0; i < codeSize; i++)
+//    {
+//        ret[i] = sum;
+//        sum -= newCode[l];
+//        sum += newCode[r + 1];
+//        l++;
+//        r++;
+//    }
+//    free(newCode);
+//    return ret;
+//}
+//
+////2515. 到目标字符串的最短距离
+//
+//int closestTarget(char** words, int wordsSize, char* target, int startIndex)
+//{
+//    int ret = -1;
+//    for (int i = 0; i < wordsSize; i++)
+//    {
+//        if (0 == strcmp(words[i], target))
+//        {
+//            int d = abs(startIndex - i);
+//            int dmin = fmin(d, wordsSize - d);
+//            ret = ret == -1 ? dmin : fmin(ret, dmin);
+//        }
+//    }
+//    return ret;
+//}
+//
+////2490. 回环句
+//
+//bool isCircularSentence(char* sentence)
+//{
+//    int len = strlen(sentence);
+//    if (sentence[0] != sentence[len - 1])
+//        return false;
+//    for (int i = 0; i < len; i++)
+//    {
+//        if (sentence[i] == ' ' && sentence[i - 1] != sentence[i + 1])
+//            return false;
+//    }
+//    return true;
+//}
+//
