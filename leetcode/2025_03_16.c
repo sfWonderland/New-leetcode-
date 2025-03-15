@@ -1,42 +1,70 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////1700. 无法吃午餐的学生数量
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+//int countStudents(int* students, int studentsSize, int* sandwiches, int sandwichesSize)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    int s1 = 0;
+//    for (int i = 0; i < studentsSize; i++)
+//    {
+//        s1 += students[i];
+//    }
+//    int s0 = studentsSize - s1;
+//    for (int i = 0; i < sandwichesSize; i++)
+//    {
+//        if (sandwiches[i] == 0 && s0 > 0)
+//            s0--;
+//        else if (sandwiches[i] == 1 && s1 > 0)
+//            s1--;
+//        else
+//            break;
+//    }
+//    return s0 + s1;
 //}
+//
+////2073. 买票需要的时间
+//
+//int timeRequiredToBuy(int* tickets, int ticketsSize, int k)
+//{
+//    int sum = 0;
+//    for (int i = 0; i < ticketsSize; i++)
+//    {
+//        sum += tickets[i] >= tickets[k] ? tickets[k] - (i > k) : tickets[i];
+//    }
+//    return sum;
+//}
+//
+////1614. 括号的最大嵌套深度
+//
+//int maxDepth(char* s)
+//{
+//    int max = 0;
+//    int sum = 0;
+//    for (int i = 0; s[i]; i++)
+//    {
+//        if (s[i] == '(')
+//        {
+//            sum++;
+//            max = fmax(max, sum);
+//        }
+//        else if (s[i] == ')')
+//            sum--;
+//    }
+//    return max;
+//}
+//
+////1637. 两点之间不包含任何点的最宽垂直区域
+//
+//int cmp(const void* e1, const void* e2)
+//{
+//    return (*(int**)e1)[0] - (*(int**)e2)[0];
+//}
+//int maxWidthOfVerticalArea(int** points, int pointsSize, int* pointsColSize)
+//{
+//    qsort(points, pointsSize, sizeof(int) * 2, cmp);
+//    int max = 0;
+//    for (int i = 1; i < pointsSize; i++)
+//    {
+//        max = fmax(max, points[i][0] - points[i - 1][0]);
+//    }
+//    return max;
+//}
+//
