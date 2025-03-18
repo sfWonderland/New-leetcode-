@@ -1,42 +1,106 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////83. 删除排序链表中的重复元素
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* deleteDuplicates(struct ListNode* head)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    if (head == NULL)
+//        return head;
+//    struct ListNode* p = head;
+//    while (p->next != NULL)
+//    {
+//        if (p->val == p->next->val)
+//            p->next = p->next->next;
+//        else
+//            p = p->next;
+//    }
+//    return head;
 //}
+//
+////82. 删除排序链表中的重复元素 II
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* deleteDuplicates(struct ListNode* head)
+//{
+//    if (head == NULL)
+//        return false;
+//    struct ListNode* L = (struct ListNode*)malloc(sizeof(struct ListNode));
+//    L->next = head;
+//    struct ListNode* cur = L;
+//    while (cur->next && cur->next->next)
+//    {
+//        if (cur->next->val == cur->next->next->val)
+//        {
+//            int x = cur->next->val;
+//            while (cur->next && cur->next->val == x)
+//            {
+//                cur->next = cur->next->next;
+//            }
+//        }
+//        else
+//            cur = cur->next;
+//    }
+//    return L->next;
+//}
+//
+////203. 移除链表元素
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+// // struct ListNode* removeElements(struct ListNode* head, int val) {
+// //     if (head == NULL) {
+// //         return head;
+// //     }
+// //     head->next = removeElements(head->next, val);
+// //     return head->val == val ? head->next : head;
+// // }
+//struct ListNode* removeElements(struct ListNode* head, int val)
+//{
+//    if (head == NULL)
+//        return false;
+//    struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
+//    dummy->next = head;
+//    struct ListNode* cur = dummy;
+//    while (cur->next)
+//    {
+//        if (cur->next->val == val)
+//            cur->next = cur->next->next;
+//        else
+//            cur = cur->next;
+//    }
+//    return dummy->next;
+//}
+//
+////237. 删除链表中的节点
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//void deleteNode(struct ListNode* node)
+//{
+//    node->val = node->next->val;
+//    struct ListNode* next = node->next;
+//    node->next = node->next->next;
+//    free(next);
+//}
+//
