@@ -1,42 +1,69 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////238. 除自身以外数组的乘积
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+///**
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* productExceptSelf(int* nums, int numsSize, int* returnSize)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    int* suf = malloc(numsSize * sizeof(int));
+//    suf[numsSize - 1] = 1;
+//    for (int i = numsSize - 2; i >= 0; i--)
+//    {
+//        suf[i] = nums[i + 1] * suf[i + 1];
+//    }
+//    int pre = 1;
+//    for (int i = 0; i < numsSize; i++)
+//    {
+//        suf[i] *= pre;
+//        pre *= nums[i];
+//    }
+//    returnSize[0] = numsSize;
+//    return suf;
 //}
+//
+////2680. 最大或值
+//
+//long long maximumOr(int* nums, int numsSize, int k)
+//{
+//    long long* suf = malloc(numsSize * sizeof(long long));
+//    suf[numsSize - 1] = 0;
+//    for (int i = numsSize - 2; i >= 0; i--)
+//    {
+//        suf[i] = nums[i + 1] | suf[i + 1];
+//    }
+//    long long pre = 0;
+//    long long max = 0;
+//    for (int i = 0; i < numsSize; i++)
+//    {
+//        max = fmax(max, suf[i] | pre | ((long long)nums[i] << k));
+//        pre |= nums[i];
+//    }
+//    free(suf);
+//    return max;
+//}
+//
+////LCR 140. 训练计划 II
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* trainingPlan(struct ListNode* head, int cnt)
+//{
+//    struct ListNode* left = head;
+//    struct ListNode* right = head;
+//    while (cnt--)
+//    {
+//        right = right->next;
+//    }
+//    while (right)
+//    {
+//        right = right->next;
+//        left = left->next;
+//    }
+//    return left;
+//}
+//
