@@ -1,42 +1,104 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////2643. 一最多的行
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+///**
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* rowAndMaximumOnes(int** mat, int matSize, int* matColSize, int* returnSize)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    int* ret = (int*)malloc(sizeof(int) * 2);
+//    memset(ret, 0, sizeof(int) * 2);
+//    for (int i = 0; i < matSize; i++)
+//    {
+//        int sum = 0;
+//        for (int j = 0; j < matColSize[0]; j++)
+//        {
+//            sum += mat[i][j];
+//        }
+//        if (ret[1] < sum)
+//        {
+//            ret[1] = sum;
+//            ret[0] = i;
+//        }
+//    }
+//    returnSize[0] = 2;
+//    return ret;
 //}
+//
+////2300. 咒语和药水的成功对数
+//
+///**
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int cmp(const void* e1, const void* e2)
+//{
+//    return *(int*)e1 - *(int*)e2;
+//}
+//int* successfulPairs(int* spells, int spellsSize, int* potions, int potionsSize, long long success, int* returnSize)
+//{
+//    int* ret = (int*)malloc(sizeof(int) * spellsSize);
+//    qsort(potions, potionsSize, sizeof(int), cmp);
+//    int n = 0;
+//    for (int i = 0; i < spellsSize; i++)
+//    {
+//        int left = 0;
+//        int right = potionsSize - 1;
+//        while (left <= right)
+//        {
+//            int mid = left + ((right - left) >> 1);
+//            long long power = (long long)spells[i] * potions[mid];
+//            if (power >= success)
+//                right = mid - 1;
+//            else
+//                left = mid + 1;
+//        }
+//        ret[n++] = potionsSize - left;
+//    }
+//    returnSize[0] = n;
+//    return ret;
+//}
+//
+////2057. 值相等的最小索引
+//
+//int smallestEqual(int* nums, int numsSize)
+//{
+//    for (int i = 0; i < numsSize; i++)
+//    {
+//        if (i % 10 == nums[i])
+//            return i;
+//    }
+//    return -1;
+//}
+//
+////LCR 142. 训练计划 IV
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* trainningPlan(struct ListNode* l1, struct ListNode* l2)
+//{
+//    struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
+//    struct ListNode* p = dummy;
+//
+//    while (l1 && l2)
+//    {
+//        if (l1->val < l2->val)
+//        {
+//            p->next = l1;
+//            l1 = l1->next;
+//        }
+//        else
+//        {
+//            p->next = l2;
+//            l2 = l2->next;
+//        }
+//        p = p->next;
+//    }
+//
+//    p->next = l1 ? l1 : l2;
+//    return dummy->next;
+//}
+//
