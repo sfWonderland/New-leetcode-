@@ -1,42 +1,148 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////LCR 023. 相交链表
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* headB)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    struct ListNode* pA = headA;
+//    struct ListNode* pB = headB;
+//    while (pA != pB)
+//    {
+//        //两个对接等长
+//        pA = pA ? pA->next : headB;
+//        pB = pB ? pB->next : headA;
+//    }
+//    return pA;
 //}
+//
+////LCR 024. 反转链表
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//
+//
+//struct ListNode* reverseList(struct ListNode* head)
+//{
+//    if (head == NULL || head->next == NULL)
+//        return head;
+//
+//    struct ListNode* p = head;
+//    //struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
+//    //dummy -> next = NULL;
+//    struct ListNode* prev = NULL;
+//    while (p)
+//    {
+//        struct ListNode* q = p->next;
+//        p->next = prev;
+//        prev = p;
+//        p = q;
+//    }
+//    return prev;
+//}
+//
+////LCR 027. 回文链表
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* reverseList(struct ListNode* head)
+//{
+//    if (head == NULL || head->next == NULL)
+//        return head;
+//
+//    struct ListNode* p = head;
+//    struct ListNode* prev = NULL;
+//    while (p)
+//    {
+//        struct ListNode* q = p->next;
+//        p->next = prev;
+//        prev = p;
+//        p = q;
+//    }
+//    return prev;
+//}
+//
+//bool isPalindrome(struct ListNode* head)
+//{
+//    struct ListNode* fast = head;
+//    struct ListNode* slow = head;
+//    while (fast->next && fast->next->next)
+//    {
+//        fast = fast->next->next;
+//        slow = slow->next;
+//    }
+//    slow = reverseList(slow->next);
+//    struct ListNode* p = head;
+//    while (slow)
+//    {
+//        if (slow->val != p->val)
+//            return false;
+//
+//        slow = slow->next;
+//        p = p->next;
+//    }
+//    return true;
+//}
+//
+////LCR 136. 删除链表的节点
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* deleteNode(struct ListNode* head, int val)
+//{
+//    struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
+//    dummy->next = head;
+//    struct ListNode* p = dummy;
+//    while (p && p->next)
+//    {
+//        if (p->next->val == val)
+//        {
+//            struct ListNode* q = p->next;
+//            p->next = q->next;
+//            free(q);
+//        }
+//        p = p->next;
+//    }
+//    return dummy->next;
+//}
+//
+////LCR 171. 训练计划 V
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* headB)
+//{
+//    struct ListNode* pA = headA;
+//    struct ListNode* pB = headB;
+//    while (pA != pB)
+//    {
+//        pA = pA ? pA->next : headB;
+//        pB = pB ? pB->next : headA;
+//    }
+//    return pA;
+//}
+//
