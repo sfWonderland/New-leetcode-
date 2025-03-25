@@ -1,42 +1,133 @@
-//#define _CRT_SECURE_NO_WARNINGS
+////141. 环形链表
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <malloc.h>
-//static int DIR[4][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };//右下左上
-//int main()
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//bool hasCycle(struct ListNode* head)
 //{
-//	int n = 0, m = 0;
-//	scanf("%d %d", &m, &n);
-//	int** square = (int**)malloc(sizeof(int*) * m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		square[i] = (int*)malloc(sizeof(int) * n);
-//		memset(square[i], 0, n);
-//	}
-//	int row = m;
-//	int col = n;
-//	int size = m * n;
-//	int num = 0;
-//	int i = 0, j = -1;
-//	for (int di = 0; num < size; di = (di + 1) % 4)
-//	{
-//		for (int t = 0; t < n; t++)
-//		{
-//			i += DIR[di][0];
-//			j += DIR[di][1];
-//			square[i][j] = ++num;
-//		}
-//		int tmp = n;
-//		n = m - 1;
-//		m = tmp;
-//	}
-//	for (int a = 0; a < row; a++)
-//	{
-//		for (int b = 0; b < col; b++)
-//			printf("%d ", square[a][b]);
-//		printf("\n");
-//	}
-//	free(square);
-//	return 0;
+//    //“龟兔赛跑”
+//    struct ListNode* slow = head;
+//    struct ListNode* fast = head;
+//    while (fast && fast->next)
+//    {
+//        fast = fast->next->next;
+//        slow = slow->next;
+//        if (fast == slow)
+//            return true;
+//    }
+//    return false;
 //}
+//
+////142. 环形链表 II
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* detectCycle(struct ListNode* head)
+//{
+//    //“龟兔赛跑”
+//    struct ListNode* slow = head;
+//    struct ListNode* fast = head;
+//    struct ListNode* p = head;
+//    while (fast && fast->next)
+//    {
+//        fast = fast->next->next;
+//        slow = slow->next;
+//        if (fast == slow)
+//        {
+//            //“龟”再走到从头结点到入环点的距离就整圈回到入环点了。
+//            while (p != slow)
+//            {
+//                p = p->next;
+//                slow = slow->next;
+//            }
+//            return p;
+//        }
+//    }
+//    return NULL;
+//}
+//
+////160. 相交链表
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* headB)
+//{
+//    if (headA == NULL || headB == NULL)
+//        return NULL;
+//    struct ListNode* pA = headA, * pB = headB;
+//    while (pA != pB)
+//    {
+//        pA = pA ? pA->next : headB;
+//        pB = pB ? pB->next : headA;
+//    }
+//    return pA;
+//}
+//
+////面试题 02.01. 移除重复节点
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+// // 1. 不使用临时缓冲区;
+// // struct ListNode* removeDuplicateNodes(struct ListNode* head) 
+// // {
+// //     struct ListNode* p = head;
+// //     while(p)
+// //     {
+// //         struct ListNode* fast = p;
+// //         int t = p -> val;
+// //         while(fast && fast -> next)
+// //         {
+// //             if(fast -> next -> val == t)
+// //             {
+// //                 struct ListNode* tmp = fast -> next;
+// //                 fast -> next = tmp -> next;
+// //                 free(tmp);
+// //             }
+// //             else
+// //             fast = fast -> next;
+// //         }
+// //         p = p -> next;
+// //     }
+// //     return head;
+// // }
+// // 2、 哈希表
+//struct ListNode* removeDuplicateNodes(struct ListNode* head)
+//{
+//    if (head == NULL)
+//        return NULL;
+//    int h[20001] = { 0 };
+//    struct ListNode* p = head;
+//    h[head->val] = 1;
+//    while (p->next)
+//    {
+//        if (0 == h[p->next->val])
+//        {
+//            h[p->next->val] = 1;
+//            p = p->next;
+//        }
+//        else
+//            p->next = p->next->next;
+//    }
+//    p->next = NULL;
+//    return head;
+//}
+//
