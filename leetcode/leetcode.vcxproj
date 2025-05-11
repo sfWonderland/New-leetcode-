@@ -260,6 +260,7 @@
     <ClCompile Include="2025_05_09.c" />
     <ClCompile Include="2025_05_10.c" />
     <ClCompile Include="2025_05_11.c" />
+    <ClCompile Include="2025_05_12.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
