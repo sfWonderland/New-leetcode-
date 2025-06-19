@@ -555,5 +555,8 @@
     <ClCompile Include="2025_06_19.c">
       <Filter>源文件\2025\June</Filter>
     </ClCompile>
+    <ClCompile Include="2025_06_20.c">
+      <Filter>源文件\2025\June</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
