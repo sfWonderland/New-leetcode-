@@ -40,6 +40,9 @@
     <Filter Include="源文件\2025\July">
       <UniqueIdentifier>{a6237fa3-523a-45d5-9307-187ead9c0bb4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\2025\Augest">
+      <UniqueIdentifier>{4439b7dd-2297-4c70-a26d-371476520af4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2025_02_28.c">
@@ -683,6 +686,9 @@
     </ClCompile>
     <ClCompile Include="2025_07_31.c">
       <Filter>源文件\2025\July</Filter>
+    </ClCompile>
+    <ClCompile Include="2025_08_01.c">
+      <Filter>源文件\2025\Augest</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
