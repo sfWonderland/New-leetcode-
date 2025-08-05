@@ -702,5 +702,8 @@
     <ClCompile Include="2025_08_05.c">
       <Filter>源文件\2025\Augest</Filter>
     </ClCompile>
+    <ClCompile Include="2025_08_06.c">
+      <Filter>源文件\2025\Augest</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
