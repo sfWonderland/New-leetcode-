@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2025_08_20.c" />
     <ClCompile Include="2025_01_04.c" />
     <ClCompile Include="2025_01_05.c" />
     <ClCompile Include="2025_01_19.c" />
