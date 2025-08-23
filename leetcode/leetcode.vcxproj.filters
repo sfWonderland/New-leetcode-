@@ -753,6 +753,12 @@
     <ClCompile Include="2025_08_23.c">
       <Filter>源文件\2025\Augest</Filter>
     </ClCompile>
+    <ClCompile Include="2025_08_24.c">
+      <Filter>源文件\2025\Augest</Filter>
+    </ClCompile>
+    <ClCompile Include="2025_08_25.c">
+      <Filter>源文件\2025\Augest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c">
