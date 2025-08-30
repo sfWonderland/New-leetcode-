@@ -43,6 +43,9 @@
     <Filter Include="源文件\2025\Augest">
       <UniqueIdentifier>{4439b7dd-2297-4c70-a26d-371476520af4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\2025\September">
+      <UniqueIdentifier>{c7c1d3ad-7286-4e95-a26b-94d8a03507c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2025_02_28.c">
@@ -773,6 +776,12 @@
     </ClCompile>
     <ClCompile Include="2025_08_30.c">
       <Filter>源文件\2025\Augest</Filter>
+    </ClCompile>
+    <ClCompile Include="2025_08_31.c">
+      <Filter>源文件\2025\Augest</Filter>
+    </ClCompile>
+    <ClCompile Include="2025_09_01.c">
+      <Filter>源文件\2025\September</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
