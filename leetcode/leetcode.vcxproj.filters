@@ -852,6 +852,9 @@
     <ClCompile Include="2025_09_24.c">
       <Filter>源文件\2025\September</Filter>
     </ClCompile>
+    <ClCompile Include="2025_09_25.c">
+      <Filter>源文件\2025\September</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c">
