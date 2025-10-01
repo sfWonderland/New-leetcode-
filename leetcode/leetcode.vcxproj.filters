@@ -46,6 +46,9 @@
     <Filter Include="源文件\2025\September">
       <UniqueIdentifier>{c7c1d3ad-7286-4e95-a26b-94d8a03507c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\2025\October">
+      <UniqueIdentifier>{d2b58fcc-11a1-4b0a-b6a0-b4f9712fcf56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2025_02_28.c">
@@ -871,7 +874,10 @@
       <Filter>源文件\2025\September</Filter>
     </ClCompile>
     <ClCompile Include="2025_10_01.c">
-      <Filter>源文件\2025\September</Filter>
+      <Filter>源文件\2025\October</Filter>
+    </ClCompile>
+    <ClCompile Include="2025_10_02.c">
+      <Filter>源文件\2025\October</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
