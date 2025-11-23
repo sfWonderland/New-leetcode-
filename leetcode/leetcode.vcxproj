@@ -454,6 +454,9 @@
     <ClCompile Include="2025_11_20.c" />
     <ClCompile Include="2025_11_21.c" />
     <ClCompile Include="2025_11_22.c" />
+    <ClCompile Include="2025_11_23.c" />
+    <ClCompile Include="2025_11_24.c" />
+    <ClCompile Include="2025_11_25.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c" />
