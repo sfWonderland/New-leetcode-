@@ -478,6 +478,8 @@
     <ClCompile Include="2025_12_14.c" />
     <ClCompile Include="2025_12_15.c" />
     <ClCompile Include="2025_12_16.c" />
+    <ClCompile Include="2025_12_17.c" />
+    <ClCompile Include="2025_12_18.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c" />
