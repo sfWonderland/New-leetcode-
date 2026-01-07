@@ -500,6 +500,7 @@
     <ClCompile Include="2026_01_05.c" />
     <ClCompile Include="2026_01_06.c" />
     <ClCompile Include="2026_01_07.c" />
+    <ClCompile Include="2026_01_08.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c" />
