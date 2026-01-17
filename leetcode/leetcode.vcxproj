@@ -493,6 +493,7 @@
     <ClCompile Include="2025_12_29.c" />
     <ClCompile Include="2025_12_30.c" />
     <ClCompile Include="2025_12_31.c" />
+    <ClCompile Include="2026-01_18.c" />
     <ClCompile Include="2026_01_01.c" />
     <ClCompile Include="2026_01_02.c" />
     <ClCompile Include="2026_01_03.c" />
