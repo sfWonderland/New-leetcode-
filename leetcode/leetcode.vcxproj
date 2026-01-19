@@ -493,7 +493,7 @@
     <ClCompile Include="2025_12_29.c" />
     <ClCompile Include="2025_12_30.c" />
     <ClCompile Include="2025_12_31.c" />
-    <ClCompile Include="2026-01_18.c" />
+    <ClCompile Include="2026_01_18.c" />
     <ClCompile Include="2026_01_01.c" />
     <ClCompile Include="2026_01_02.c" />
     <ClCompile Include="2026_01_03.c" />
@@ -512,6 +512,7 @@
     <ClCompile Include="2026_01_16.c" />
     <ClCompile Include="2026_01_17.c" />
     <ClCompile Include="2026_01_19.c" />
+    <ClCompile Include="2026_01_20.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c" />

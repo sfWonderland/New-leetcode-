@@ -1212,10 +1212,13 @@
     <ClCompile Include="2026_01_17.c">
       <Filter>源文件\2026\January</Filter>
     </ClCompile>
-    <ClCompile Include="2026-01_18.c">
+    <ClCompile Include="2026_01_18.c">
       <Filter>源文件\2026\January</Filter>
     </ClCompile>
     <ClCompile Include="2026_01_19.c">
+      <Filter>源文件\2026\January</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_01_20.c">
       <Filter>源文件\2026\January</Filter>
     </ClCompile>
   </ItemGroup>
