@@ -551,6 +551,8 @@
     <ClCompile Include="2026_02_25.c" />
     <ClCompile Include="2026_02_26.c" />
     <ClCompile Include="2026_02_27.c" />
+    <ClCompile Include="2026_02_28.c" />
+    <ClCompile Include="2026_03_01.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c" />
