@@ -67,6 +67,9 @@
     <Filter Include="源文件\2026\March">
       <UniqueIdentifier>{47a4a9e4-cf4f-452f-8902-2fd9635fe8c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\2026\April">
+      <UniqueIdentifier>{f96634a9-2463-4c6a-94cb-5106dfa3f75a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2025_02_28.c">
@@ -1436,6 +1439,9 @@
     </ClCompile>
     <ClCompile Include="2026_03_31.c">
       <Filter>源文件\2026\March</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_04_01.c">
+      <Filter>源文件\2026\April</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
