@@ -73,6 +73,9 @@
     <Filter Include="源文件\2026\May">
       <UniqueIdentifier>{584e0f72-b009-44cf-8e26-0231a3224a7a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\2026\June">
+      <UniqueIdentifier>{32e7fe6d-d6ff-4187-8572-44e3cd167768}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2025_02_28.c">
@@ -1621,6 +1624,9 @@
       <Filter>源文件\2026\May</Filter>
     </ClCompile>
     <ClCompile Include="2026_05_30.c">
+      <Filter>源文件\2026\May</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_05_31.c">
       <Filter>源文件\2026\May</Filter>
     </ClCompile>
   </ItemGroup>
