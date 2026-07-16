@@ -1770,6 +1770,9 @@
     <ClCompile Include="2026_07_16.c">
       <Filter>源文件\2026\July</Filter>
     </ClCompile>
+    <ClCompile Include="2026_07_17.c">
+      <Filter>源文件\2026\July</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c">
