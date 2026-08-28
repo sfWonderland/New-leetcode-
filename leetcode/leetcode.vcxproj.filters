@@ -82,6 +82,9 @@
     <Filter Include="源文件\2026\August">
       <UniqueIdentifier>{67f36ccc-839c-45b9-9a09-0eb6ff7d79b1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\2026\September">
+      <UniqueIdentifier>{2e302e39-94af-408a-acdc-f1a5fa0ffd27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2025_02_28.c">
@@ -1901,6 +1904,21 @@
     </ClCompile>
     <ClCompile Include="2026_08_28.c">
       <Filter>源文件\2026\August</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_08_29.c">
+      <Filter>源文件\2026\August</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_08_30.c">
+      <Filter>源文件\2026\August</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_08_31.c">
+      <Filter>源文件\2026\August</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_09_01.c">
+      <Filter>源文件\2026\September</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_09_02.c">
+      <Filter>源文件\2026\September</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
