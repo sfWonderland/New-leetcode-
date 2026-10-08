@@ -2028,6 +2028,12 @@
     <ClCompile Include="2026_10_07.c">
       <Filter>源文件\2026\October</Filter>
     </ClCompile>
+    <ClCompile Include="2026_10_08.c">
+      <Filter>源文件\2026\October</Filter>
+    </ClCompile>
+    <ClCompile Include="2026_10_09.c">
+      <Filter>源文件\2026\October</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c">
