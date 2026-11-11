@@ -1,0 +1,30 @@
+//// 142. »·ÐÎÁ´±í II
+//
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* detectCycle(struct ListNode* head)
+//{
+//    struct ListNode* fast = head, * slow = head;
+//    while (fast && fast->next)
+//    {
+//        fast = fast->next->next;
+//        slow = slow->next;
+//        if (fast == slow)
+//        {
+//            struct ListNode* head1 = head;
+//            while (head1 != slow)
+//            {
+//                head1 = head1->next;
+//                slow = slow->next;
+//            }
+//            return slow;
+//        }
+//    }
+//    return NULL;
+//}
+//
