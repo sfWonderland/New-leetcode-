@@ -818,6 +818,11 @@
     <ClCompile Include="2026_11_19.c" />
     <ClCompile Include="2026_11_20.c" />
     <ClCompile Include="2026_11_21.c" />
+    <ClCompile Include="2026_11_22.c" />
+    <ClCompile Include="2026_11_23.c" />
+    <ClCompile Include="2026_11_24.c" />
+    <ClCompile Include="2026_11_25.c" />
+    <ClCompile Include="2026_11_26.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2025_08_14.c" />
